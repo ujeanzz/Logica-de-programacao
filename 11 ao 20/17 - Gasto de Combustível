@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int tempoh, vm;
+    double distanciap, qlitros;
+    
+    scanf("%d %d", &tempoh, &vm);
+    
+    distanciap = tempoh * vm;
+    qlitros = distanciap / 12;
+    
+    printf("%.3lf\n", qlitros);
+ 
+    return 0;
+}
