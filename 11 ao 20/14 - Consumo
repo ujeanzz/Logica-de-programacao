@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int distanciap;
+    double totalcomb, consumom;
+    
+    scanf("%d", &distanciap);
+    scanf("%lf", &totalcomb);
+    
+    consumom = distanciap / totalcomb;
+    
+    printf("%.3lf km/l\n", consumom);
+ 
+    return 0;
+}
