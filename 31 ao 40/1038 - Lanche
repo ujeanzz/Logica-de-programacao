@@ -1,0 +1,36 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int cod, quant;
+    double total, valor;
+    
+    scanf("%d %d", &cod, &quant);
+    
+    if(cod ==1)
+    {
+        valor = 4.00;
+    }
+    else if(cod ==2)
+    {
+        valor = 4.50;
+    }
+    else if(cod ==3)
+    {
+        valor = 5.00;
+    }
+    else if(cod ==4)
+    {
+        valor = 2.00;
+    }
+    else
+    {
+        valor = 1.50;
+    }
+    
+    total = quant * valor;
+    
+    printf("Total: R$ %.2lf\n", total);
+ 
+    return 0;
+}
