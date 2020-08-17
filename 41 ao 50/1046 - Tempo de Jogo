@@ -1,0 +1,17 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int horai, horaf, contador = 0;
+    scanf("%d %d", &horai, &horaf);
+    
+    do{
+        contador++;
+        horai++;
+        if (horai == 24) horai = 0;
+    }while(horai != horaf);
+    
+    printf("O JOGO DUROU %d HORA(S)\n", contador);
+ 
+    return 0;
+}
