@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+    float x,y,z,tot,media;
+    int cont,n;
+    scanf("%d",&n);
+    for(cont=1;cont<=n;cont++){
+        scanf("%f%f%f",&x,&y,&z);
+        tot=x*2.0+y*3.0+z*5.0;
+        media=tot/10.0;
+        printf("%.1f\n",media);
+    }
+    return 0;
+}
