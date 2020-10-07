@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+  double num, media, vtotalcont;
+  int cont, totaln;
+  media=0;
+  vtotalcont=0;
+  totaln=0;
+  
+  for(cont=1; cont<=6; cont++){
+    scanf("%lf", &num);
+    if(num>0){
+    totaln +=1;
+    vtotalcont +=num;
+    }
+  }
+    media= vtotalcont/totaln;
+    printf("%d valores positivos\n", totaln);
+    printf("%.1f\n", media);
+
+  return 0;
+}
