@@ -1,0 +1,73 @@
+#include <stdio.h>
+
+int main(void) {
+  int li, co, k=0, i=0, rtn=0, x, sli, sco, instan=1, squadr=0, mat[9][9];
+  scanf("%d", &x);
+
+  while(instan<=x){
+    for(li=0; li<9; li++){
+      for(co=0; co<9; co++){
+        scanf("%d", &mat[li][co]);
+      }
+    }
+    for(li=0; li<9; li++){
+      if(mat[li][0]* mat[li][1]* mat[li][2]* mat[li][3]* mat[li][4]* mat[li][5]* mat[li][6]* mat[li][7]* mat[li][8]!=362880)
+      {
+        rtn+=1;
+      }
+    }
+    for(co=0; co<9; co++){
+      if(mat[0][co]* mat[1][co]* mat[2][co]* mat[3][co]* mat[4][co]* mat[5][co]* mat[6][co]* mat[7][co]* mat[8][co]!=362880)
+      {
+        rtn+=1;
+      }
+    }
+    for(li=0; li<9; li++)
+    {
+      sli= 0;
+      sco= 0;
+      for(co=0; co<9; co++)
+      {
+        sli+= mat[li][co];
+        sco+= mat[co][li];
+      }
+      if(sli!= 45 || sco!= 45)
+      {
+        li=9;
+        rtn+=1;
+      }
+    }
+    while(i<=6){
+      k= 0;
+      while(k<=6){
+        squadr= 0;
+        for(li=i; li<3+i; li++)
+        {
+          for(co=k; co<3+k; co++)
+          {
+            squadr+= mat[li][co];
+          }
+        }
+        if(squadr!= 45)
+        {
+          rtn+=1;
+          i=6;
+        }
+      k= k+3;  
+      }
+    i= i+3;  
+    }
+    if(rtn==0)
+    {
+      printf("Instancia %d\nSIM\n\n", instan);
+    }
+    else{
+      printf("Instancia %d\nNAO\n\n", instan);
+    }
+    instan++;
+    rtn=0;
+    i=0;
+    k=0;
+  }
+  return 0;
+}
